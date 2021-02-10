@@ -1,18 +1,11 @@
 package com.ziben.recognise;
 
-import java.util.List;
-
 import com.amazonaws.services.rekognition.AmazonRekognition;
 import com.amazonaws.services.rekognition.AmazonRekognitionClientBuilder;
-import com.amazonaws.services.rekognition.model.BoundingBox;
-import com.amazonaws.services.rekognition.model.CompareFacesMatch;
-import com.amazonaws.services.rekognition.model.CompareFacesRequest;
-import com.amazonaws.services.rekognition.model.CompareFacesResult;
-import com.amazonaws.services.rekognition.model.ComparedFace;
-import com.amazonaws.services.rekognition.model.Image;
-import com.amazonaws.services.rekognition.model.ImageQuality;
-import com.amazonaws.services.rekognition.model.S3Object;
+import com.amazonaws.services.rekognition.model.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
+
+import java.util.List;
 
 public class CompareFacesID {
 	public static void main(String[] args) throws Exception {
@@ -22,7 +15,7 @@ public class CompareFacesID {
 		String target = "rekognition/cnh-claudio.png";
 		//String target = "rekognition/rg-claudio.jpg";
 		Float similarityThreshold = 70F;
-		String bucket = "storage-textract";
+		String bucket = "storage-infra-ia-lm";
 		
 		AmazonRekognition rekognitionClient = AmazonRekognitionClientBuilder.defaultClient();
 

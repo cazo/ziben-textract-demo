@@ -1,30 +1,19 @@
 package com.ziben.demo;
 
-import java.awt.image.BufferedImage;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import javax.imageio.ImageIO;
-
-import com.amazonaws.auth.AWSCredentials;
-import com.amazonaws.auth.AWSStaticCredentialsProvider;
-import com.amazonaws.auth.BasicAWSCredentials;
 import com.amazonaws.client.builder.AwsClientBuilder.EndpointConfiguration;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3ClientBuilder;
 import com.amazonaws.services.s3.model.S3ObjectInputStream;
 import com.amazonaws.services.textract.AmazonTextract;
 import com.amazonaws.services.textract.AmazonTextractClientBuilder;
-import com.amazonaws.services.textract.model.AnalyzeDocumentRequest;
-import com.amazonaws.services.textract.model.AnalyzeDocumentResult;
-import com.amazonaws.services.textract.model.Block;
-import com.amazonaws.services.textract.model.BoundingBox;
-import com.amazonaws.services.textract.model.Document;
-import com.amazonaws.services.textract.model.Point;
-import com.amazonaws.services.textract.model.Relationship;
-import com.amazonaws.services.textract.model.S3Object;
+import com.amazonaws.services.textract.model.*;
 import com.ziben.beans.BlockId;
+
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class AnalyzePayroll {
 

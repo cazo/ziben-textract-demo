@@ -5,6 +5,9 @@
 	<groupId>ziben-textract-demo</groupId>
 	<artifactId>ziben-textract-demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<name>Zipdin IA</name>
+	<description>Módulo Zipdin para estudo de AI/ML</description>
+
 	<build>
 		<sourceDirectory>src</sourceDirectory>
 		<plugins>

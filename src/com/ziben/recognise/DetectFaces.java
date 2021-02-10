@@ -1,18 +1,11 @@
 package com.ziben.recognise;
 
-import java.util.List;
-
 import com.amazonaws.services.rekognition.AmazonRekognition;
 import com.amazonaws.services.rekognition.AmazonRekognitionClientBuilder;
-import com.amazonaws.services.rekognition.model.AgeRange;
-import com.amazonaws.services.rekognition.model.AmazonRekognitionException;
-import com.amazonaws.services.rekognition.model.Attribute;
-import com.amazonaws.services.rekognition.model.DetectFacesRequest;
-import com.amazonaws.services.rekognition.model.DetectFacesResult;
-import com.amazonaws.services.rekognition.model.FaceDetail;
-import com.amazonaws.services.rekognition.model.Image;
-import com.amazonaws.services.rekognition.model.S3Object;
+import com.amazonaws.services.rekognition.model.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
+
+import java.util.List;
 
 public class DetectFaces {
 
@@ -26,6 +19,7 @@ public class DetectFaces {
 		AmazonRekognition rekognitionClient = AmazonRekognitionClientBuilder.defaultClient();
 
 		DetectFacesRequest request = new DetectFacesRequest()
+				//.withImage(new Image().withS3Object(new S3Object().withName(photo).withBucket(bucket)))
 				.withImage(new Image().withS3Object(new S3Object().withName(photo).withBucket(bucket)))
 				.withAttributes(Attribute.ALL);
 				//.withAttributes(Attribute.DEFAULT);
